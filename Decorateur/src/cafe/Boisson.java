@@ -25,4 +25,5 @@ public abstract class Boisson {
 	 * @return cout de la boisson
 	 */
 	public abstract double cout();
+
 }

@@ -19,5 +19,10 @@ public abstract class DecorateurIngredient extends Boisson {
 		return this.prix + composant.cout();
 	}
 
-		
+	@Override
+	public String toString() {
+		return "Boisson{" +
+				 getDescription() +", "+ " cout : " + cout()+
+				'}';
+	}
 }
