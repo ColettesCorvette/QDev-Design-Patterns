@@ -1,0 +1,35 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class Boisson {
+  + Boisson(): 
+  # description: String
+  + cout(): double
+   description: String
+}
+class BoissonChantilly {
+  + BoissonChantilly(Boisson): 
+}
+class Colombia {
+  + Colombia(): 
+  + cout(): double
+}
+class DecorateurIngredient {
+  + DecorateurIngredient(double, String, Boisson): 
+  + cout(): double
+   description: String
+}
+class Expresso {
+  + Expresso(): 
+  + cout(): double
+}
+
+BoissonChantilly      -[#000082,plain]-^  DecorateurIngredient 
+Colombia              -[#000082,plain]-^  Boisson              
+DecorateurIngredient  -[#000082,plain]-^  Boisson              
+DecorateurIngredient "1" *-[#595959,plain]-> "composant\n1" Boisson              
+Expresso              -[#000082,plain]-^  Boisson              
+@enduml
