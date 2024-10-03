@@ -1,15 +1,15 @@
-package logo;
+package rene.logo;
 
 
 public class ReneLaTaupe{
 	/**
      * Chemin d'acces au fichier
-     * contenant l'image de fond du logo
+     * contenant l'image de fond du rene.logo
      */
     private String nomIm;
     
     /**
-     * Prix du logo
+     * Prix du rene.logo
      */
     private double prix;
     
@@ -29,7 +29,7 @@ public class ReneLaTaupe{
     }
     
     /**
-     * @return le prix du logo
+     * @return le prix du rene.logo
      */
     public double combienCaCoute(){
         return prix;

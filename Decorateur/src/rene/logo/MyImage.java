@@ -1,4 +1,4 @@
-package logo;
+package rene.logo;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
