@@ -12,7 +12,7 @@ public class Main
         
         i.paintOver("img/Chapeau.png", 280,42);
         
-        i.display();  // Permet l'affichage dans une fenetre de l'image associee
+        i.display();
         
         
     }

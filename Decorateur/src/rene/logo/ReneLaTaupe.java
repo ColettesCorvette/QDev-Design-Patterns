@@ -1,7 +1,7 @@
 package rene.logo;
 
 
-public class ReneLaTaupe{
+public class ReneLaTaupe extends Logo{
 	/**
      * Chemin d'acces au fichier
      * contenant l'image de fond du rene.logo
@@ -31,7 +31,8 @@ public class ReneLaTaupe{
     /**
      * @return le prix du rene.logo
      */
-    public double combienCaCoute(){
+    public double combienCaCoute()
+    {
         return prix;
     }
 }
