@@ -1,0 +1,47 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class Bicyclette {
+  + Bicyclette(): 
+}
+class Bus {
+  + Bus(): 
+}
+class FabriquePieton {
+  + FabriquePieton(): 
+  + creerVehicule(): Vehicule
+}
+interface FabriqueVehicule << interface >> {
+  + creerVehicule(): Vehicule
+}
+class FabriqueVoiture {
+  + FabriqueVoiture(): 
+  + creerVehicule(): Vehicule
+}
+class Pieton {
+  + Pieton(): 
+}
+class Vehicule {
+  + Vehicule(String, double): 
+  - type: String
+  - vitesseMax: double
+   type: String
+   vitesseMax: double
+}
+class Voiture {
+  + Voiture(): 
+}
+class node5 as "package  fabrique.voiture.UML" << package >>
+
+Bicyclette        -[#000082,plain]-^  Vehicule         
+Bus               -[#000082,plain]-^  Vehicule         
+FabriquePieton    -[#008200,dashed]-^  FabriqueVehicule 
+FabriquePieton    -[#595959,dashed]->  Pieton           : "«create»"
+FabriqueVoiture   -[#008200,dashed]-^  FabriqueVehicule 
+FabriqueVoiture   -[#595959,dashed]->  Voiture          : "«create»"
+Pieton            -[#000082,plain]-^  Vehicule         
+Voiture           -[#000082,plain]-^  Vehicule         
+@enduml
