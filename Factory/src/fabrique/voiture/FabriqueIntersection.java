@@ -1,4 +1,4 @@
-package fabrique.voiture.UML;
+package fabrique.voiture;
 
 import fabrique.voiture.*;
 
