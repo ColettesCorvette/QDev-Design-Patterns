@@ -2,42 +2,23 @@ package aeroport;
 
 public class Aeroport
 {
-    private boolean piste_libre;
-
-    public Aeroport()
+    private static Aeroport instance;
+    private Aeroport()
     {
-        this.piste_libre=true;
+        System.out.println("Creation de l'aeroport");
     }
 
-    public static Aeroport getInstance()
+    public synchronized static Aeroport getInstance()
     {
-        return new Aeroport();
-    }
-
-    @Override
-    public String toString() {
-        return "Aeroport{" +
-                "piste_libre=" + piste_libre +
-                '}';
-    }
-
-    public synchronized boolean autoriserAdecoller()
-    {
-        if(this.piste_libre)
+        if(instance==null)
         {
-            this.piste_libre=false;
-            return true;
+            instance = new Aeroport();
         }
-        return false;
+       return instance;
     }
 
-    public synchronized boolean libererPiste()
+    public synchronized void faireDecoller(Avion avion)
     {
-        if(!this.piste_libre)
-        {
-            this.piste_libre=true;
-            return true;
-        }
-        return false;
+        avion.decoller();
     }
 }
