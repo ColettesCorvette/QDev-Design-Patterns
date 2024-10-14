@@ -16,7 +16,7 @@ public class Simulateur
     {
         HashMap<String, Integer> m = new HashMap<>();
         FabriqueIntersection f = new FabriqueIntersection();
-        for(int i=0;i<100;i++)
+        for(int i=1;i<100;i++)
         {
             String v = f.creerVehicule().getType();
             if(m.containsKey(v))
